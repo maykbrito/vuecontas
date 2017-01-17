@@ -20,7 +20,7 @@
 </nav>
 
 
-<table border="1" cellpadding="10">
+<table border="1" cellpadding="10" v-if="activedView==0">
     <thead>
     <tr>
         <th>#</th>
@@ -42,6 +42,15 @@
     </tbody>
 
 </table>
+
+<div class="criarcontas" v-if="activedView==1">
+    <form action="" name="form">
+        Vencimento: <input type="text"> <br/>
+        Nome: <input type="text"> <br/>
+        Valor: <input type="text"> <br/>
+        Paga: <input type="text"> <br/>
+    </form>
+</div>
 
 <script type="text/javascript" src="node_modules/vue/dist/vue.min.js"></script>
 <script type="text/javascript" src="app.js"></script>
