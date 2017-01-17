@@ -1,14 +1,23 @@
+Vue.filter('doneLabel', function(value){
+    if (value == 0){
+        return "Não paga";
+    }
+    else {
+        return "Paga";
+    }
+});
+
 var app = new Vue({
     el: "#app",
     data: {
-        test:"",
         title: "Contas a Pagar",
         menus: [
             {id:0, name: "Listar contas"},
             {id:1, name: "Criar contas"},
         ],
-        activedView: 1,
+        activedView: 0,
         formType: 'insert',
+        status_label: "gray",
         bill: {
             date_due:'',
             name:'',
@@ -42,7 +51,20 @@ var app = new Vue({
                     count++;
                 }
             }
-            return !count ? "Nenhuma conta a pagar" : "Existem "+count+" a serem pagas";
+            if (this.bills.length == 0) {
+                this.status_label = "gray";
+                return "Nenhuma conta cadatrada";
+            }
+            else {
+                if (!count) {
+                    this.status_label = "green";
+                    return "Nenhuma conta a pagar";
+                } else {
+                    this.status_label = "red";
+                    return "Existem "+count+" a serem pagas";
+                }
+            }
+
         }
     },
     methods: {
@@ -71,6 +93,21 @@ var app = new Vue({
             this.bill = bill;
             this.activedView = 1;
             this.formType = 'update';
+        },
+        deleteBill: function (bill) {
+            check = confirm("Deseja realmente remover a conta: "
+                + bill.name + " de vencimento: "
+                + bill.date_due + " no valor de: "
+                + bill.value + " ?")
+
+            if (check == true) {
+                toremove = this.bills.indexOf(bill);
+                this.bills.splice(toremove, 1);
+            }
+        },
+        changeStatus: function(bill) {
+            this.bill = bill;
+            this.bill.done = !bill.done;
         }
     }
-})
+});
