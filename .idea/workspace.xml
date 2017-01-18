@@ -25,8 +25,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+            <state relative-caret-position="75">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -35,9 +35,47 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-              <folding />
+            <state relative-caret-position="180">
+              <caret line="245" column="6" selection-start-line="245" selection-start-column="6" selection-end-line="245" selection-end-column="6" />
+              <folding>
+                <element signature="e#39#136#0" expanded="false" />
+                <element signature="e#222#834#0" expanded="false" />
+                <element signature="e#447#610#0" expanded="false" />
+                <element signature="e#625#832#0" expanded="false" />
+                <element signature="e#873#3418#0" expanded="false" />
+                <element signature="e#1935#2609#0" expanded="false" />
+                <element signature="e#2624#3313#0" expanded="false" />
+                <element signature="e#3327#3416#0" expanded="false" />
+                <element signature="e#3459#5248#0" expanded="false" />
+                <element signature="e#4350#4817#0" expanded="false" />
+                <element signature="e#4832#5046#0" expanded="false" />
+                <element signature="e#5060#5245#0" expanded="false" />
+                <element signature="e#5282#7243#0" expanded="false" />
+                <element signature="e#5300#5451#0" expanded="false" />
+                <element signature="e#5868#6000#0" expanded="false" />
+                <element signature="e#6014#6439#0" expanded="false" />
+                <element signature="e#6455#7241#0" expanded="false" />
+                <marker date="1484705866000" expanded="false" signature="248:417" placeholder="..." />
+                <marker date="1484705866000" expanded="true" signature="261:406" placeholder="..." />
+                <marker date="1484705866000" expanded="true" signature="297:392" placeholder="..." />
+                <marker date="1484705866000" expanded="false" signature="917:1035" placeholder="..." />
+                <marker date="1484705866000" expanded="true" signature="932:972" placeholder="{...}" />
+                <marker date="1484705866000" expanded="true" signature="989:1023" placeholder="{...}" />
+                <marker date="1484705866000" expanded="false" signature="1105:1906" placeholder="..." />
+                <marker date="1484705866000" expanded="true" signature="1121:1328" placeholder="..." />
+                <marker date="1484705866000" expanded="true" signature="1134:1311" placeholder="..." />
+                <marker date="1484705866000" expanded="true" signature="1344:1893" placeholder="..." />
+                <marker date="1484705866000" expanded="true" signature="1388:1871" placeholder="..." />
+                <marker date="1484705866000" expanded="false" signature="3534:4321" placeholder="..." />
+                <marker date="1484705866000" expanded="true" signature="3586:4310" placeholder="..." />
+                <marker date="1484705866000" expanded="true" signature="3606:4208" placeholder="..." />
+                <marker date="1484705866000" expanded="true" signature="3627:3763" placeholder="..." />
+                <marker date="1484705866000" expanded="true" signature="3784:4038" placeholder="..." />
+                <marker date="1484705866000" expanded="true" signature="3844:4016" placeholder="..." />
+                <marker date="1484705866000" expanded="true" signature="3872:3990" placeholder="..." />
+                <marker date="1484705866000" expanded="true" signature="4059:4187" placeholder="..." />
+                <marker date="1484705866000" expanded="false" signature="5495:5595" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,8 +86,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -157,12 +195,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1484636732356</updated>
-      <workItem from="1484636733468" duration="7598000" />
+      <workItem from="1484636733468" duration="13124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7598000" />
+    <option name="totallyTimeSpent" value="13124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1220" y="23" width="747" height="634" extended-state="0" />
@@ -192,7 +230,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -206,17 +246,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="180">
+          <caret line="245" column="6" selection-start-line="245" selection-start-column="6" selection-end-line="245" selection-end-column="6" />
+          <folding>
+            <element signature="e#39#136#0" expanded="false" />
+            <element signature="e#222#834#0" expanded="false" />
+            <element signature="e#447#610#0" expanded="false" />
+            <element signature="e#625#832#0" expanded="false" />
+            <element signature="e#873#3418#0" expanded="false" />
+            <element signature="e#1935#2609#0" expanded="false" />
+            <element signature="e#2624#3313#0" expanded="false" />
+            <element signature="e#3327#3416#0" expanded="false" />
+            <element signature="e#3459#5248#0" expanded="false" />
+            <element signature="e#4350#4817#0" expanded="false" />
+            <element signature="e#4832#5046#0" expanded="false" />
+            <element signature="e#5060#5245#0" expanded="false" />
+            <element signature="e#5282#7243#0" expanded="false" />
+            <element signature="e#5300#5451#0" expanded="false" />
+            <element signature="e#5868#6000#0" expanded="false" />
+            <element signature="e#6014#6439#0" expanded="false" />
+            <element signature="e#6455#7241#0" expanded="false" />
+            <marker date="1484705866000" expanded="false" signature="248:417" placeholder="..." />
+            <marker date="1484705866000" expanded="true" signature="261:406" placeholder="..." />
+            <marker date="1484705866000" expanded="true" signature="297:392" placeholder="..." />
+            <marker date="1484705866000" expanded="false" signature="917:1035" placeholder="..." />
+            <marker date="1484705866000" expanded="true" signature="932:972" placeholder="{...}" />
+            <marker date="1484705866000" expanded="true" signature="989:1023" placeholder="{...}" />
+            <marker date="1484705866000" expanded="false" signature="1105:1906" placeholder="..." />
+            <marker date="1484705866000" expanded="true" signature="1121:1328" placeholder="..." />
+            <marker date="1484705866000" expanded="true" signature="1134:1311" placeholder="..." />
+            <marker date="1484705866000" expanded="true" signature="1344:1893" placeholder="..." />
+            <marker date="1484705866000" expanded="true" signature="1388:1871" placeholder="..." />
+            <marker date="1484705866000" expanded="false" signature="3534:4321" placeholder="..." />
+            <marker date="1484705866000" expanded="true" signature="3586:4310" placeholder="..." />
+            <marker date="1484705866000" expanded="true" signature="3606:4208" placeholder="..." />
+            <marker date="1484705866000" expanded="true" signature="3627:3763" placeholder="..." />
+            <marker date="1484705866000" expanded="true" signature="3784:4038" placeholder="..." />
+            <marker date="1484705866000" expanded="true" signature="3844:4016" placeholder="..." />
+            <marker date="1484705866000" expanded="true" signature="3872:3990" placeholder="..." />
+            <marker date="1484705866000" expanded="true" signature="4059:4187" placeholder="..." />
+            <marker date="1484705866000" expanded="false" signature="5495:5595" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

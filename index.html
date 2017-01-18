@@ -3,82 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Code Contas</title>
-    <style type="text/css">
-        .pago, .green {
-            color:limegreen;
-        }
-        .naopago, .red{
-            color:red;
-        }
-        .gray {
-            color:gray;
-        }
-    </style>
+
 </head>
 
 <body id="app">
 
-<h1>{{ title }}</h1>
-<h3 :class="status_label">{{ status }}</h3>
-
-
-<nav>
-    <ul>
-        <li v-for="o in menus">
-            <a href="#" @click.prevent="showView(o.id)"> {{o.name}} </a>
-        </li>
-    </ul>
-</nav>
-
-
-<table border="1" cellpadding="10" v-if="activedView==0">
-    <thead>
-    <tr>
-        <th>#</th>
-        <th>Vencimento</th>
-        <th>Nome</th>
-        <th>Valor</th>
-        <th>Paga?</th>
-        <th>Action</th>
-    </tr>
-    </thead>
-    <tbody>
-        <tr v-for="(index,o) in bills">
-            <td>{{index +1}}</td>
-            <td>{{ o.date_due }}</td>
-            <td>{{ o.name }}</td>
-            <td>{{ o.value | currency 'R$ ' }}</td>
-            <td ><a href="#" @click.prevent="changeStatus(o)" :class="{'pago': o.done, 'naopago': !o.done}">{{ o.done | doneLabel }}</a></td>
-            <td><a href="#" @click.prevent="loadBill(o)">Editar</a> | <a href="#" class="naopago" @click.prevent="deleteBill(o)">X</a> </td>
-        </tr>
-
-    </tbody>
-
-</table>
-
-<div class="criarcontas" v-if="activedView==1">
-    <form name="form" @submit.prevent="submit">
-        <table>
-            <tr>
-                <td>Vencimento:</td>
-                <td><input type="text" v-model="bill.date_due"></td>
-            </tr>
-            <tr>
-                <td>Nome:</td>
-                <td><select v-model="bill.name">
-                        <option v-for="o in names" :value="o"> {{ o }}</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Valor:</td>
-                <td><input type="text" v-model="bill.value"></td>
-            </tr>
-        </table>
-        <br><br>
-        <input type="submit" value="Enviar" @click="submit">
-    </form>
-</div>
+<app-component></app-component>
 
 <script type="text/javascript" src="node_modules/vue/dist/vue.min.js"></script>
 <script type="text/javascript" src="app.js"></script>
