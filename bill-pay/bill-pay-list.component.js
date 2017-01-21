@@ -27,29 +27,43 @@ window.billPayListComponent = Vue.extend({
                 <td>{{ o.name }}</td>
                 <td>{{ o.value | currency 'R$ ' }}</td>
                 <td ><a href="#" @click.prevent="changeStatus(o)" :class="{'pago': o.done, 'naopago': !o.done}">{{ o.done | doneLabel }}</a></td>
-                <td><a v-link="{name: 'bill-pay.update', params: {index: index}}">Editar</a> | <a href="#" class="naopago" @click.prevent="deleteBill(o)">X</a> </td>
+                <td><a v-link="{name: 'bill-pay.update', params: {id: o.id}}">Editar</a> | <a href="#" class="naopago" @click.prevent="deleteBill(o)">X</a> </td>
             </tr>
     
         </tbody>
     </table>
     `,
+    http: {
+        root: 'http://192.168.10.10:8000/api'
+    },
     data: function(){
         return {
             bills: this.$root.$children[0].billsPay
         }
     },
+    created: function() {
+        let self = this;
+        Bill.query().then(function(response){
+          self.bills = response.data;
+      })
+    },
     methods: {
         deleteBill: function (bill) {
-            if (confirm("Deseja realmente remover a conta: "
-                + bill.name + " de vencimento: "
-                + bill.date_due + " no valor de: "
-                + bill.value + " ?")) {
-                this.$root.$children[0].billsPay.$remove(bill);
+            if (confirm("Deseja realmente remover a conta?")) {
+                let self = this;
+                Bill.delete({id: bill.id}, bill).then(function(response){
+                    self.$dispatch('change-info');
+                    self.bills.$remove(bill);
+                })
             }
         },
         changeStatus: function(bill) {
-            this.$parent.bill = bill;
-            this.$parent.bill.done = !bill.done;
+            let self = this;
+            bill.done = !bill.done;
+            Bill.update({id: bill.id}, bill).then(function(response){
+                self.$dispatch('change-info');
+                self.$router.go({name: 'bill-pay.list'});
+            })
         }
     },
 });

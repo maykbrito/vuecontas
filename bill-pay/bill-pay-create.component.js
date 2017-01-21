@@ -21,7 +21,7 @@ window.billPayCreateComponent = Vue.extend({
                 </tr>
             </table>
             <br><br>
-            <input type="submit" value="Enviar" @click="submit">
+            <input type="submit" value="Enviar">
         </form>
     </div>
    `,
@@ -46,31 +46,33 @@ window.billPayCreateComponent = Vue.extend({
         }
     },
     created: function () {
-        if (this.$route.name == 'bill.update') {
+        if (this.$route.name == 'bill-pay.update') {
             this.formType = 'update';
-            this.getBill(this.$route.params.index);
+            this.getBill(this.$route.params.id);
             return;
         }
         this.formType = 'insert';
     },
     methods: {
         submit: function() {
+            let self = this;
             if (this.formType == 'insert') {
-                this.$root.$children[0].billsPay.push(this.bill);
+                Bill.save({},this.bill).then(function(response){
+                    self.$dispatch('change-info');
+                    self.$router.go({name: 'bill-pay.list'});
+                })
+            }else {
+                Bill.update({id: this.bill.id}, this.bill).then(function(response){
+                    self.$dispatch('change-info');
+                    self.$router.go({name: 'bill-pay.list'});
+                })
             }
-
-            this.bill = {
-                date_due:'',
-                name:'',
-                value:0,
-                done:0,
-            };
-
-            this.$router.go({name: 'bill.list'});
         },
-        getBill: function (index) {
-            this.bill = this.$root.$children[0].billsPay[index];
-
+        getBill: function (id) {
+            var self = this;
+            Bill.get({id: id}).then(function(response){
+                self.bill = response.data;
+            })
         }
     },
 });
